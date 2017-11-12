@@ -4,6 +4,11 @@
     Welcome to {{title}}!
   </h1>
 </div>
-<button kendoButton (click)="onButtonClick()">Browse</button>
-<button kendoButton (click)="onButtonClick()">Browse1</button>
 
+<h1>Angular Router</h1>
+<nav>
+  <a routerLink="/button" routerLinkActive="active">Button Example</a>
+  <a routerLink="/grid" routerLinkActive="active">Grid Example</a>
+  <a routerLink="/chart" routerLinkActive="active">Chart Example</a>
+</nav>
+<router-outlet></router-outlet>
