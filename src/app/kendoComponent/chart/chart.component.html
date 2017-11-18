@@ -1,3 +1,17 @@
-<p>
-  chart works!
-</p>
+<button kendoButton [icon]="'folder'" (click)="showChart('Donut')">Show Donut Chart</button>
+<button kendoButton [icon]="'folder'" (click)="showChart('Line')">Show Line Chart</button>
+
+<div *ngIf="isShowDonut">
+<kendo-chart #chartComponent (legendItemClick)="onLegendItemClick($event)">
+  <kendo-chart-series>
+    <kendo-chart-series-item type="donut" [data]="data" categoryField="status" field="count" [visible]="true">
+      <kendo-chart-series-item-labels [content]="labelContent" color="#fff" background="none">
+      </kendo-chart-series-item-labels>
+    </kendo-chart-series-item>
+  </kendo-chart-series>
+  <kendo-chart-legend [visible]="isLegend" position="bottom"></kendo-chart-legend>
+</kendo-chart>
+
+<button kendoButton (click)="legendHide(chartComponent)">Legend Hide</button>
+<button kendoButton (click)="seriesItemHide(chartComponent)">Series Item Hide</button>
+</div>

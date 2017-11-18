@@ -8,6 +8,10 @@ import { ChartComponent } from './kendoComponent/chart/chart.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { GridExampleComponent } from './kendoComponent/grid-example/grid-example.component';
 import { ButtonExampleComponent } from './kendoComponent/button-example/button-example.component';
+import { ChartsModule } from '@progress/kendo-angular-charts';
+import 'hammerjs';
+
+
 
 @NgModule({
   declarations: [
@@ -18,7 +22,7 @@ import { ButtonExampleComponent } from './kendoComponent/button-example/button-e
     ButtonExampleComponent
   ],
   imports: [
-    BrowserModule, BrowserAnimationsModule, ButtonsModule, AppRoutingModule
+    BrowserModule, BrowserAnimationsModule, ButtonsModule, AppRoutingModule, ChartsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
